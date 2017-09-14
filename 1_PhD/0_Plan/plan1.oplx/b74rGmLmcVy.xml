@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="b74rGmLmcVy">
+  <start-date>2017-09-06T06:00:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>任务 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>里程碑 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>群组 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>资源 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>设备 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>素材 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>群组 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <name/>
+    <type>Group</type>
+    <child-resource idref="r1"/>
+    <child-resource idref="r2"/>
+    <child-resource idref="r3"/>
+    <child-resource idref="r7"/>
+    <child-resource idref="r4"/>
+    <child-resource idref="r5"/>
+    <child-resource idref="r6"/>
+  </resource>
+  <resource id="r1">
+    <name>YF</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r2">
+    <name>KD</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r3">
+    <name>TK</name>
+    <type>Staff</type>
+  </resource>
+  <resource id="r4">
+    <name>HMD</name>
+    <type>Equipment</type>
+  </resource>
+  <resource id="r5">
+    <name>Gesture sensor</name>
+    <type>Equipment</type>
+  </resource>
+  <resource id="r6">
+    <name>Microscope</name>
+    <type>Equipment</type>
+  </resource>
+  <resource id="r7">
+    <name>User</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t31"/>
+    <child-task idref="t37"/>
+    <child-task idref="t64"/>
+    <child-task idref="t72"/>
+    <child-task idref="t48"/>
+    <child-task idref="t82"/>
+  </task>
+  <task id="t20">
+    <title>befriending hospital</title>
+    <type>milestone</type>
+    <end-constraint-date>2017-10-30T23:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <assignment idref="r7"/>
+    <end-no-later-than>2017-10-30T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t21">
+    <title>befriending CZ-Meditec</title>
+    <type>milestone</type>
+    <end-constraint-date>2017-10-30T23:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <assignment idref="r7"/>
+    <end-no-later-than>2017-10-30T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t22">
+    <title>befriending Hololens?</title>
+    <type>milestone</type>
+    <end-constraint-date>2017-12-30T23:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <end-no-later-than>2017-12-30T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t23">
+    <title>Updates @ KD (CZ)</title>
+    <effort>28800</effort>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t24">
+    <title>Updates @ TK (IPR)</title>
+    <effort>28800</effort>
+    <assignment idref="r3"/>
+  </task>
+  <task id="t25">
+    <title>Register PhD @ KIT</title>
+    <type>milestone</type>
+    <prerequisite-task idref="t26"/>
+    <assignment idref="r3"/>
+  </task>
+  <task id="t26">
+    <title>Exposé writing</title>
+    <effort>288000</effort>
+    <start-constraint-date>2017-09-11T11:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2017-10-05T22:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t33" kind="FF"/>
+    <prerequisite-task idref="t35" kind="FF"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-11T11:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2017-10-05T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t27">
+    <title>KD -&gt; IPR</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-12T06:00:00.000Z</start-constraint-date>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2017-09-12T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t28">
+    <title>TK -&gt; CZ</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-13T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t27"/>
+    <assignment idref="r3"/>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2017-09-13T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t29">
+    <title>Topic discussion </title>
+    <effort>28800</effort>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+  </task>
+  <task id="t31">
+    <title>Organizational</title>
+    <type>group</type>
+    <child-task idref="t112"/>
+    <child-task idref="t29"/>
+    <child-task idref="t27"/>
+    <child-task idref="t28"/>
+    <child-task idref="t26"/>
+    <child-task idref="t25"/>
+    <child-task idref="t24"/>
+    <child-task idref="t23"/>
+    <child-task idref="t22"/>
+    <child-task idref="t21"/>
+    <child-task idref="t20"/>
+    <child-task idref="t102"/>
+  </task>
+  <task id="t33">
+    <title>user interview</title>
+    <effort>57600</effort>
+    <prerequisite-task idref="t104"/>
+    <assignment idref="r7"/>
+  </task>
+  <task id="t35">
+    <title>Instrument observation</title>
+    <effort>144000</effort>
+    <start-constraint-date>2017-09-11T08:00:00.000Z</start-constraint-date>
+    <assignment idref="r7"/>
+    <start-no-earlier-than>2017-09-11T08:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t36">
+    <title>Literature  </title>
+    <effort>2304000</effort>
+    <start-constraint-date>2017-09-10T22:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t33" kind="FF"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-10T22:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t37">
+    <title>Research</title>
+    <type>group</type>
+    <end-constraint-date>2018-03-30T22:00:00.000Z</end-constraint-date>
+    <child-task idref="t36"/>
+    <child-task idref="t35"/>
+    <child-task idref="t104"/>
+    <child-task idref="t33"/>
+    <child-task idref="t93"/>
+    <end-no-later-than>2018-03-30T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t39">
+    <title>BIOROB 2018?</title>
+    <schedule-type>alap</schedule-type>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-06T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2018-05-14T22:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-06T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2018-05-14T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t40">
+    <title>ICRA 2019?</title>
+    <schedule-type>alap</schedule-type>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-06T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2018-09-09T22:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-06T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2018-09-09T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t41">
+    <title>SysCon</title>
+    <schedule-type>alap</schedule-type>
+    <effort>316800</effort>
+    <start-constraint-date>2017-09-25T12:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2017-10-19T15:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t47" kind="SS"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-25T12:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2017-10-19T15:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t42">
+    <title>Gesture-based Robot Motion control</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t54" kind="SS"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t43">
+    <title>Gesture interpretation</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t57" kind="SS"/>
+    <assignment idref="r5"/>
+  </task>
+  <task id="t44">
+    <title>Learing surgeon behavior -&gt; robot behavior (avoid collision / vision blocking)</title>
+    <effort>288000</effort>
+    <start-constraint-date>2017-09-18T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t55" kind="SS"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-18T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t45">
+    <title>visibility-based camera positioning (points of interest)</title>
+    <effort>57600</effort>
+    <prerequisite-task idref="t55"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t46">
+    <title>Robot Motion and Interaction with soft tissue (threads, vessel, brain, other organ)</title>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-06T06:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-06T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t47">
+    <title>AR System concept in OR</title>
+    <effort>1256400</effort>
+    <start-constraint-date>2017-09-11T06:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-11T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t48">
+    <title>Publication</title>
+    <type>group</type>
+    <end-constraint-date>2020-08-31T15:00:00.000Z</end-constraint-date>
+    <child-task idref="t47"/>
+    <child-task idref="t46"/>
+    <child-task idref="t45"/>
+    <child-task idref="t44"/>
+    <child-task idref="t43"/>
+    <child-task idref="t42"/>
+    <child-task idref="t41"/>
+    <child-task idref="t151"/>
+    <child-task idref="t39"/>
+    <child-task idref="t40"/>
+    <child-task idref="t153"/>
+    <child-task idref="t152"/>
+    <end-no-later-than>2020-08-31T15:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t50">
+    <title>Software implementation</title>
+    <effort>4320000</effort>
+    <end-constraint-date>2019-09-25T15:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t54"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+    <assignment idref="r6"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2019-09-25T15:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t51">
+    <title>Integration</title>
+    <effort>4320000</effort>
+    <start-constraint-date>2018-07-06T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2020-01-31T16:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t50" kind="SS"/>
+    <assignment idref="r1"/>
+    <assignment idref="r5"/>
+    <assignment idref="r6"/>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2018-07-06T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2020-01-31T16:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t52">
+    <title>App design</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t63"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t53">
+    <title>Head tracking?</title>
+    <effort>28800</effort>
+    <prerequisite-task idref="t61"/>
+    <prerequisite-task idref="t110"/>
+    <assignment idref="r4"/>
+  </task>
+  <task id="t54">
+    <title>Gesture -&gt; Motion</title>
+    <effort>1440000</effort>
+    <prerequisite-task idref="t55"/>
+    <prerequisite-task idref="t57"/>
+    <assignment idref="r5"/>
+    <assignment idref="r6"/>
+    <assignment idref="r4"/>
+  </task>
+  <task id="t55">
+    <title>Robot motion control</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t56"/>
+    <assignment idref="r6"/>
+  </task>
+  <task id="t56">
+    <title>Basic movements</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t97"/>
+    <assignment idref="r6"/>
+  </task>
+  <task id="t57">
+    <title>Gesture interpretation</title>
+    <effort>864000</effort>
+    <prerequisite-task idref="t58"/>
+    <assignment idref="r5"/>
+  </task>
+  <task id="t58">
+    <title>Gesture Input </title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t59"/>
+    <prerequisite-task idref="t60"/>
+    <assignment idref="r5"/>
+  </task>
+  <task id="t59">
+    <title>Sensors &amp; hardware</title>
+    <effort>288000</effort>
+    <start-constraint-date>2018-01-30T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t61"/>
+    <prerequisite-task idref="t62"/>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2018-01-30T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t60">
+    <title>HMD-Visualization</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t61"/>
+    <prerequisite-task idref="t62"/>
+    <prerequisite-task idref="t110"/>
+    <assignment idref="r4"/>
+  </task>
+  <task id="t61">
+    <title>Framework</title>
+    <effort>864000</effort>
+    <start-constraint-date>2018-01-16T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t52"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2018-01-16T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t62">
+    <title>Tool making</title>
+    <effort>1728000</effort>
+    <start-constraint-date>2017-10-30T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t52"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2017-10-30T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t63">
+    <title>HMI concept</title>
+    <effort>432000</effort>
+    <start-constraint-date>2017-12-01T09:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-12-01T09:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t64">
+    <title>Implementation + Development</title>
+    <type>group</type>
+    <end-constraint-date>2019-10-29T23:00:00.000Z</end-constraint-date>
+    <child-task idref="t63"/>
+    <child-task idref="t52"/>
+    <child-task idref="t62"/>
+    <child-task idref="t61"/>
+    <child-task idref="t110"/>
+    <child-task idref="t53"/>
+    <child-task idref="t60"/>
+    <child-task idref="t59"/>
+    <child-task idref="t58"/>
+    <child-task idref="t57"/>
+    <child-task idref="t97"/>
+    <child-task idref="t56"/>
+    <child-task idref="t55"/>
+    <child-task idref="t54"/>
+    <child-task idref="t50"/>
+    <child-task idref="t51"/>
+    <end-no-later-than>2019-10-29T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t65">
+    <title>Performance analysis</title>
+    <splittable>no</splittable>
+    <effort>288000</effort>
+    <end-constraint-date>2020-05-01T15:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t133"/>
+    <prerequisite-task idref="t140"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2020-05-01T15:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t66">
+    <title>Assesment @ hospital</title>
+    <effort>144000</effort>
+    <end-constraint-date>2020-04-29T22:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t67"/>
+    <assignment idref="r7"/>
+    <end-no-later-than>2020-04-29T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t67">
+    <title>Assesment @ CZ-Meditec</title>
+    <effort>144000</effort>
+    <end-constraint-date>2020-04-29T22:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t132"/>
+    <assignment idref="r7"/>
+    <end-no-later-than>2020-04-29T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t68">
+    <title>Assesment @ IPR</title>
+    <effort>288000</effort>
+    <end-constraint-date>2020-03-29T22:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t138"/>
+    <assignment idref="r3"/>
+    <end-no-later-than>2020-03-29T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t69">
+    <title>Assesment @ CZ-CRT</title>
+    <effort>288000</effort>
+    <end-constraint-date>2020-03-29T22:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t138"/>
+    <assignment idref="r2"/>
+    <end-no-later-than>2020-03-29T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t70">
+    <title>Assesment @ YF</title>
+    <effort>576000</effort>
+    <end-constraint-date>2020-02-29T23:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t71"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2020-02-29T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t71">
+    <title>Validation</title>
+    <splittable>no</splittable>
+    <effort>1152000</effort>
+    <start-constraint-date>2019-06-27T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t147" kind="SS"/>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2019-06-27T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t72">
+    <title>Assesment</title>
+    <type>group</type>
+    <end-constraint-date>2020-03-30T22:00:00.000Z</end-constraint-date>
+    <child-task idref="t146"/>
+    <child-task idref="t141"/>
+    <child-task idref="t143"/>
+    <child-task idref="t142"/>
+    <child-task idref="t149"/>
+    <child-task idref="t147"/>
+    <child-task idref="t71"/>
+    <child-task idref="t70"/>
+    <child-task idref="t138"/>
+    <child-task idref="t69"/>
+    <child-task idref="t132"/>
+    <child-task idref="t67"/>
+    <child-task idref="t66"/>
+    <child-task idref="t140"/>
+    <child-task idref="t68"/>
+    <child-task idref="t133"/>
+    <child-task idref="t65"/>
+    <end-no-later-than>2020-03-30T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t73">
+    <title>YF review + tweak</title>
+    <schedule-type>alap</schedule-type>
+    <effort>144000</effort>
+    <end-constraint-date>2020-06-25T10:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t74"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2020-06-25T10:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t74">
+    <title>Conclusion + Outlook</title>
+    <effort>288000</effort>
+    <end-constraint-date>2020-06-23T08:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t75"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2020-06-23T08:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t75">
+    <title>Assesment / Evaluation / Validation</title>
+    <effort>5760000</effort>
+    <start-constraint-date>2019-08-26T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t72" kind="FF"/>
+    <prerequisite-task idref="t72" kind="SS"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2019-08-26T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t76">
+    <title>Implementation</title>
+    <effort>5904000</effort>
+    <start-constraint-date>2018-11-13T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t61" kind="SS"/>
+    <prerequisite-task idref="t64" kind="FF"/>
+    <assignment idref="r1"/>
+    <assignment idref="r6"/>
+    <assignment idref="r4"/>
+    <assignment idref="r5"/>
+    <start-no-earlier-than>2018-11-13T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t77">
+    <title>Analysis &amp; Methodology</title>
+    <effort>5760000</effort>
+    <start-constraint-date>2017-12-01T09:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t37" kind="FF"/>
+    <prerequisite-task idref="t63" kind="SS"/>
+    <prerequisite-task idref="t107" kind="SS"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-12-01T09:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t79">
+    <title>Background</title>
+    <effort>576000</effort>
+    <start-constraint-date>2018-03-14T09:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t77" kind="SS"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2018-03-14T09:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t80">
+    <title>State-of-the-Art (draft)</title>
+    <effort>144000</effort>
+    <start-constraint-date>2017-09-06T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2018-01-30T23:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-06T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2018-01-30T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t81">
+    <title>Introduction</title>
+    <effort>288000</effort>
+    <start-constraint-date>2017-09-06T06:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-06T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t82">
+    <title>PhD Thesis </title>
+    <type>group</type>
+    <end-constraint-date>2020-08-30T22:00:00.000Z</end-constraint-date>
+    <child-task idref="t81"/>
+    <child-task idref="t80"/>
+    <child-task idref="t106"/>
+    <child-task idref="t79"/>
+    <child-task idref="t108"/>
+    <child-task idref="t107"/>
+    <child-task idref="t77"/>
+    <child-task idref="t76"/>
+    <child-task idref="t75"/>
+    <child-task idref="t74"/>
+    <child-task idref="t73"/>
+    <child-task idref="t128"/>
+    <child-task idref="t127"/>
+    <child-task idref="t126"/>
+    <child-task idref="t125"/>
+    <child-task idref="t131"/>
+    <end-no-later-than>2020-08-30T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t93">
+    <title>check @ TK</title>
+    <type>milestone</type>
+    <prerequisite-task idref="t36"/>
+    <assignment idref="r3"/>
+  </task>
+  <task id="t97">
+    <title>access to microscope (simulation/real)</title>
+    <type>milestone</type>
+    <start-constraint-date>2018-01-22T09:00:00.000Z</start-constraint-date>
+    <assignment idref="r6"/>
+    <start-no-earlier-than>2018-01-22T09:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t102">
+    <title>YF+KD+TK meeting</title>
+    <effort>28800</effort>
+    <end-constraint-date>2017-09-29T22:00:00.000Z</end-constraint-date>
+    <assignment idref="r3"/>
+    <assignment idref="r2"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2017-09-29T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t104">
+    <title>OR use case observation</title>
+    <effort>57600</effort>
+    <start-constraint-date>2017-09-08T14:00:00.000Z</start-constraint-date>
+    <assignment idref="r7"/>
+    <start-no-earlier-than>2017-09-08T14:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t106">
+    <title>State-of-the-Art</title>
+    <effort>144000</effort>
+    <prerequisite-task idref="t80"/>
+    <assignment idref="r1"/>
+  </task>
+  <task id="t107">
+    <title>Use Case</title>
+    <effort>576000</effort>
+    <start-constraint-date>2017-10-04T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t108"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-10-04T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t108">
+    <title>Use Case (draft)</title>
+    <effort>576000</effort>
+    <start-constraint-date>2017-09-06T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2018-01-30T23:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-06T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2018-01-30T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t110">
+    <title>access to HMD</title>
+    <type>milestone</type>
+    <start-constraint-date>2017-10-02T06:00:00.000Z</start-constraint-date>
+    <assignment idref="r4"/>
+    <start-no-earlier-than>2017-10-02T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t112">
+    <title>Project planning</title>
+    <effort>57600</effort>
+    <start-constraint-date>2017-09-07T06:00:00.000Z</start-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-07T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t125">
+    <title>TK happy</title>
+    <type>milestone</type>
+    <schedule-type>alap</schedule-type>
+    <end-constraint-date>2020-07-22T08:00:00.000Z</end-constraint-date>
+    <assignment idref="r3"/>
+    <end-no-later-than>2020-07-22T08:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t126">
+    <title>KD happy</title>
+    <type>milestone</type>
+    <schedule-type>alap</schedule-type>
+    <end-constraint-date>2020-07-13T12:00:00.000Z</end-constraint-date>
+    <assignment idref="r2"/>
+    <end-no-later-than>2020-07-13T12:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t127">
+    <title>supervisor review</title>
+    <schedule-type>alap</schedule-type>
+    <effort>892800</effort>
+    <locked-end-date>2020-07-31T15:00:00.000Z</locked-end-date>
+    <prerequisite-task idref="t125" kind="FF"/>
+    <prerequisite-task idref="t126" kind="FF"/>
+    <prerequisite-task idref="t128"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+  </task>
+  <task id="t128">
+    <title>YF happy</title>
+    <type>milestone</type>
+    <schedule-type>alap</schedule-type>
+    <end-constraint-date>2020-07-28T12:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t73"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2020-07-28T12:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t131">
+    <title>Submission</title>
+    <type>milestone</type>
+    <start-constraint-date>2020-08-15T11:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t127"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2020-08-15T11:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t132">
+    <title>CZ-CRT happy</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-08-14T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t69" kind="SS"/>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2019-08-14T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t133">
+    <title>IPR happy</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-08-13T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t68" kind="SS"/>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2019-08-13T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t138">
+    <title>YF happy</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-08-05T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t70" kind="SS"/>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2019-08-05T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t140">
+    <title>Hospital happy</title>
+    <type>milestone</type>
+    <prerequisite-task idref="t66" kind="SS"/>
+    <assignment idref="r7"/>
+  </task>
+  <task id="t141">
+    <title>Define validation/evaluation criteria</title>
+    <effort>288000</effort>
+    <start-constraint-date>2019-02-15T07:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t146"/>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2019-02-15T07:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t142">
+    <title>Design experiments</title>
+    <effort>288000</effort>
+    <prerequisite-task idref="t143"/>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+  </task>
+  <task id="t143">
+    <title>TK happy</title>
+    <type>milestone</type>
+    <start-constraint-date>2019-04-08T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t141" kind="SS"/>
+    <assignment idref="r3"/>
+    <start-no-earlier-than>2019-04-08T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t146">
+    <title>Testing &amp; improvements</title>
+    <splittable>no</splittable>
+    <effort>5760000</effort>
+    <start-constraint-date>2018-08-17T06:00:00.000Z</start-constraint-date>
+    <prerequisite-task idref="t51" kind="SS"/>
+    <assignment idref="r1"/>
+    <assignment idref="r2"/>
+    <start-no-earlier-than>2018-08-17T06:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t147">
+    <title>Performance analysis</title>
+    <splittable>no</splittable>
+    <effort>288000</effort>
+    <end-constraint-date>2020-04-29T22:00:00.000Z</end-constraint-date>
+    <prerequisite-task idref="t149"/>
+    <assignment idref="r1"/>
+    <end-no-later-than>2020-04-29T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t149">
+    <title>Execute experiments</title>
+    <effort>1152000</effort>
+    <prerequisite-task idref="t142"/>
+    <assignment idref="r1"/>
+    <assignment idref="r4"/>
+    <assignment idref="r6"/>
+    <assignment idref="r5"/>
+  </task>
+  <task id="t151">
+    <title>IROS 2018?</title>
+    <schedule-type>alap</schedule-type>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-07T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2018-02-28T23:00:00.000Z</end-constraint-date>
+    <start-no-earlier-than>2017-09-07T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2018-02-28T23:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t152">
+    <title>ICRA 2020?</title>
+    <schedule-type>alap</schedule-type>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-06T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2019-09-09T22:00:00.000Z</end-constraint-date>
+    <assignment idref="r1"/>
+    <start-no-earlier-than>2017-09-06T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2019-09-09T22:00:00.000Z</end-no-later-than>
+  </task>
+  <task id="t153">
+    <title>IROS 2019?</title>
+    <schedule-type>alap</schedule-type>
+    <effort>28800</effort>
+    <start-constraint-date>2017-09-07T06:00:00.000Z</start-constraint-date>
+    <end-constraint-date>2019-02-28T23:00:00.000Z</end-constraint-date>
+    <start-no-earlier-than>2017-09-07T06:00:00.000Z</start-no-earlier-than>
+    <end-no-later-than>2019-02-28T23:00:00.000Z</end-no-later-than>
+  </task>
+  <critical-path root="-1" enabled="true" resources="false">
+    <color r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>
